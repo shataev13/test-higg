@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0c" />
+
+  <!-- ====== SEO / соцсети — отредактируй под себя ====== -->
+  <title>Алекс Морозов — Digital Creator & Фрилансер</title>
+  <meta name="description" content="Digital creator и фрилансер: видео, контент для соцсетей, дизайн и личный бренд. Создаю визуал, который невозможно пролистать. Открыт к новым проектам." />
+  <meta name="author" content="Алекс Морозов" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Алекс Морозов — Digital Creator & Фрилансер" />
+  <meta property="og:description" content="Видео, контент для соцсетей, дизайн и личный бренд. Создаю визуал, который невозможно пролистать." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ====== Шрифты ====== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- ====== Иконка (можно заменить на свой favicon) ====== -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Если JS отключён — показываем контент без анимаций появления -->
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}.cursor,.cursor-dot{display:none!important}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#about">Перейти к содержанию</a>
+
+  <!-- Кастомный курсор -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Зерно и фоновые градиенты -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+  </div>
+
+  <!-- ============ ШАПКА ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" data-cursor="link">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">alex<span class="logo__accent">.creates</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#about" class="nav__link">Обо мне</a>
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#work" class="nav__link">Проекты</a>
+        <a href="#media" class="nav__link">Медиа</a>
+        <a href="#process" class="nav__link">Процесс</a>
+        <a href="#testimonials" class="nav__link">Отзывы</a>
+        <a href="#contact" class="btn btn--small nav__cta" data-cursor="link">Написать мне</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ ГЛАВНЫЙ ЭКРАН ============ -->
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="eyebrow">
+            <span class="status-dot"></span>
+            Фрилансер · Digital Creator · доступен для проектов
+          </p>
+
+          <h1 class="hero__title">
+            Создаю визуал,<br />
+            который <span class="accent-text">невозможно</span><br />
+            пролистать
+          </h1>
+
+          <p class="hero__lead">
+            Привет, я <strong>Алекс</strong> — снимаю, монтирую и придумываю контент,
+            который смотрят до конца, сохраняют и репостят. Помогаю брендам и людям
+            расти в Instagram, Twitter/X и за их пределами.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary" data-cursor="link">
+              Обсудить проект
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#work" class="btn btn--ghost" data-cursor="link">Смотреть работы</a>
+          </div>
+
+          <ul class="hero__stats">
+            <li>
+              <span class="stat__num" data-count="120" data-suffix="+">0</span>
+              <span class="stat__label">проектов сдано</span>
+            </li>
+            <li>
+              <span class="stat__num" data-count="85" data-suffix="K+">0</span>
+              <span class="stat__label">подписчиков</span>
+            </li>
+            <li>
+              <span class="stat__num" data-count="6" data-suffix=" лет">0</span>
+              <span class="stat__label">в digital</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Большой медиа-слот под главное фото/видео -->
+        <div class="hero__media reveal" data-reveal-delay="120">
+          <div class="media-slot media-slot--portrait" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon">🎬</span>
+              <span class="media-slot__title">Твоё главное фото или видео</span>
+              <span class="media-slot__hint">формат 4:5 · портрет / showreel</span>
+            </div>
+          </div>
+          <div class="hero__media-badge">
+            <span class="status-dot"></span>
+            Showreel 2026
+          </div>
+          <div class="media-slot media-slot--reel hero__media-mini" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon media-slot__icon--play">▶</span>
+              <span class="media-slot__hint">Reel 9:16</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Прокрутить вниз">
+        <span>Листай</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ БЕГУЩАЯ СТРОКА ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Видеопродакшн ✦ Reels & Shorts ✦ Монтаж ✦ Цветокор ✦ Motion-дизайн ✦ Съёмка ✦ Контент-стратегия ✦ Личный бренд ✦ SMM ✦ Сторителлинг ✦</span>
+        <span>Видеопродакшн ✦ Reels & Shorts ✦ Монтаж ✦ Цветокор ✦ Motion-дизайн ✦ Съёмка ✦ Контент-стратегия ✦ Личный бренд ✦ SMM ✦ Сторителлинг ✦</span>
+      </div>
+    </div>
+
+    <!-- ============ ОБО МНЕ ============ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">01 — Обо мне</span>
+          <h2 class="section__title">Не просто исполнитель,<br />а партнёр по контенту</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__media reveal">
+            <div class="media-slot media-slot--square" data-cursor="media">
+              <div class="media-slot__inner">
+                <span class="media-slot__icon">📸</span>
+                <span class="media-slot__title">Фото в работе / на площадке</span>
+                <span class="media-slot__hint">формат 1:1</span>
+              </div>
+            </div>
+            <div class="media-slot media-slot--wide about__media-strip" data-cursor="media">
+              <div class="media-slot__inner">
+                <span class="media-slot__icon">🎞️</span>
+                <span class="media-slot__hint">Backstage-кадр или горизонтальное фото</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__text reveal" data-reveal-delay="120">
+            <p class="about__lead">
+              Последние 6 лет я живу на стыке камеры, монтажного стола и соцсетей.
+              За это время прошёл путь от «снимаю на телефон для себя» до контента,
+              который собирает миллионы просмотров для клиентов.
+            </p>
+            <p>
+              Я не верю в шаблоны. Каждый проект начинается с вопроса «что человек
+              почувствует в первые 2 секунды?» — и дальше выстраивается визуал,
+              ритм и история. Одинаково кайфую и от съёмки на улице, и от ночного
+              монтажа под дедлайн.
+            </p>
+            <p>
+              Помимо клиентских задач веду свои блоги в Instagram и Twitter/X —
+              это моя лаборатория, где я тестирую форматы раньше, чем предложу их вам.
+            </p>
+
+            <ul class="about__facts">
+              <li><span class="about__fact-num">∞</span> идей в заметках</li>
+              <li><span class="about__fact-num">24/7</span> на связи по проекту</li>
+              <li><span class="about__fact-num">100%</span> кадров — авторские</li>
+            </ul>
+
+            <div class="about__tags">
+              <span>📍 Работаю удалённо и на выезд</span>
+              <span>🌍 RU / EN</span>
+              <span>⚡ Быстрые правки</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ УСЛУГИ ============ -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">02 — Услуги</span>
+          <h2 class="section__title">Чем могу быть полезен</h2>
+          <p class="section__sub">От одной задачи до полного ведения контента — собираем формат под тебя.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="card service reveal" data-cursor="link">
+            <span class="service__num">01</span>
+            <span class="service__icon">🎬</span>
+            <h3 class="service__title">Видео для соцсетей</h3>
+            <p>Reels, Shorts, TikTok и вертикальные ролики, которые держат внимание с первой секунды.</p>
+            <ul class="service__list">
+              <li>сценарий и раскадровка</li>
+              <li>динамичный монтаж</li>
+              <li>субтитры и звук</li>
+            </ul>
+          </article>
+
+          <article class="card service reveal" data-reveal-delay="80" data-cursor="link">
+            <span class="service__num">02</span>
+            <span class="service__icon">✂️</span>
+            <h3 class="service__title">Монтаж и пост-продакшн</h3>
+            <p>Соберу из сырого материала готовый ролик: ритм, цветокор, графика, звук.</p>
+            <ul class="service__list">
+              <li>цветокоррекция</li>
+              <li>motion-графика</li>
+              <li>звуковой дизайн</li>
+            </ul>
+          </article>
+
+          <article class="card service reveal" data-reveal-delay="160" data-cursor="link">
+            <span class="service__num">03</span>
+            <span class="service__icon">🎨</span>
+            <h3 class="service__title">Дизайн и айдентика</h3>
+            <p>Визуальный стиль, обложки, шаблоны сторис и оформление профиля под единый бренд.</p>
+            <ul class="service__list">
+              <li>визуальная концепция</li>
+              <li>шаблоны и обложки</li>
+              <li>оформление профиля</li>
+            </ul>
+          </article>
+
+          <article class="card service reveal" data-cursor="link">
+            <span class="service__num">04</span>
+            <span class="service__icon">📈</span>
+            <h3 class="service__title">Личный бренд и стратегия</h3>
+            <p>Помогу выстроить системный контент, найти tone of voice и расти в Instagram и Twitter/X.</p>
+            <ul class="service__list">
+              <li>контент-стратегия</li>
+              <li>контент-план</li>
+              <li>аналитика и рост</li>
+            </ul>
+          </article>
+
+          <article class="card service reveal" data-reveal-delay="80" data-cursor="link">
+            <span class="service__num">05</span>
+            <span class="service__icon">📷</span>
+            <h3 class="service__title">Съёмка фото и видео</h3>
+            <p>Контентные съёмки, предметка, lifestyle и backstage — материал на недели вперёд.</p>
+            <ul class="service__list">
+              <li>контент-дни</li>
+              <li>предметная съёмка</li>
+              <li>репортаж / lifestyle</li>
+            </ul>
+          </article>
+
+          <article class="card service reveal" data-reveal-delay="160" data-cursor="link">
+            <span class="service__num">06</span>
+            <span class="service__icon">🧭</span>
+            <h3 class="service__title">Консультации и менторство</h3>
+            <p>Разберём твой профиль, контент и продакшн — дам конкретный план по росту.</p>
+            <ul class="service__list">
+              <li>аудит профиля</li>
+              <li>разбор контента</li>
+              <li>план действий</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПРОЕКТЫ / КЕЙСЫ ============ -->
+    <section class="section work" id="work">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">03 — Проекты</span>
+          <h2 class="section__title">Избранные кейсы</h2>
+          <p class="section__sub">Несколько работ, которыми горжусь. Полное портфолио — по запросу.</p>
+        </div>
+
+        <div class="work__list">
+          <!-- Кейс 1 -->
+          <article class="case reveal" data-cursor="link">
+            <div class="case__media">
+              <div class="media-slot media-slot--video" data-cursor="media">
+                <div class="media-slot__inner">
+                  <span class="media-slot__icon media-slot__icon--play">▶</span>
+                  <span class="media-slot__title">Кейс-видео / превью проекта</span>
+                  <span class="media-slot__hint">формат 16:9</span>
+                </div>
+              </div>
+            </div>
+            <div class="case__info">
+              <div class="case__meta">
+                <span class="case__cat">Видеопродакшн</span>
+                <span class="case__year">2025</span>
+              </div>
+              <h3 class="case__title">Запуск бренда одежды в Reels</h3>
+              <p class="case__desc">
+                Серия из 12 вертикальных роликов для запуска коллекции.
+                Единый визуальный код, динамичный монтаж и трендовые звуки.
+              </p>
+              <ul class="case__results">
+                <li><b>2.4M</b> просмотров</li>
+                <li><b>+18K</b> подписчиков</li>
+                <li><b>x3</b> охваты</li>
+              </ul>
+              <span class="case__link">Смотреть кейс →</span>
+            </div>
+          </article>
+
+          <!-- Кейс 2 -->
+          <article class="case case--reverse reveal" data-cursor="link">
+            <div class="case__media">
+              <div class="media-slot media-slot--video" data-cursor="media">
+                <div class="media-slot__inner">
+                  <span class="media-slot__icon media-slot__icon--play">▶</span>
+                  <span class="media-slot__title">Кейс-видео / превью проекта</span>
+                  <span class="media-slot__hint">формат 16:9</span>
+                </div>
+              </div>
+            </div>
+            <div class="case__info">
+              <div class="case__meta">
+                <span class="case__cat">Личный бренд</span>
+                <span class="case__year">2025</span>
+              </div>
+              <h3 class="case__title">Личный бренд эксперта в Twitter/X</h3>
+              <p class="case__desc">
+                Контент-стратегия и визуал для эксперта: от позиционирования
+                до ежедневных постов и тредов. Системный рост аудитории за 4 месяца.
+              </p>
+              <ul class="case__results">
+                <li><b>0→40K</b> подписчиков</li>
+                <li><b>120+</b> тредов</li>
+                <li><b>15</b> лидов/мес</li>
+              </ul>
+              <span class="case__link">Смотреть кейс →</span>
+            </div>
+          </article>
+
+          <!-- Кейс 3 -->
+          <article class="case reveal" data-cursor="link">
+            <div class="case__media">
+              <div class="media-slot media-slot--video" data-cursor="media">
+                <div class="media-slot__inner">
+                  <span class="media-slot__icon media-slot__icon--play">▶</span>
+                  <span class="media-slot__title">Кейс-видео / превью проекта</span>
+                  <span class="media-slot__hint">формат 16:9</span>
+                </div>
+              </div>
+            </div>
+            <div class="case__info">
+              <div class="case__meta">
+                <span class="case__cat">Съёмка + монтаж</span>
+                <span class="case__year">2024</span>
+              </div>
+              <h3 class="case__title">Контент-день для кофейни</h3>
+              <p class="case__desc">
+                Один съёмочный день — контент на месяц вперёд: ролики,
+                фото для ленты и сторис. Полный цикл от идеи до публикации.
+              </p>
+              <ul class="case__results">
+                <li><b>30+</b> единиц контента</li>
+                <li><b>1 день</b> съёмки</li>
+                <li><b>+22%</b> вовлечённость</li>
+              </ul>
+              <span class="case__link">Смотреть кейс →</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="work__cta reveal">
+          <a href="#contact" class="btn btn--ghost" data-cursor="link">Хочу такой же результат →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ МЕДИА-КОНТЕНТ ============ -->
+    <section class="section media" id="media">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">04 — Медиа</span>
+          <h2 class="section__title">Контент во всех форматах</h2>
+          <p class="section__sub">
+            Вертикальные ролики, скринкасты, backstage и визуальные кейсы.
+            Это пространство — для живого контента. Заполни его своими работами.
+          </p>
+        </div>
+
+        <!-- Лента вертикальных роликов -->
+        <div class="media__row-head reveal">
+          <h3>Вертикальные ролики · Reels / Shorts</h3>
+          <span class="media__hint">9:16 · листай вбок →</span>
+        </div>
+        <div class="media__reels reveal">
+          <div class="media-slot media-slot--reel" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon media-slot__icon--play">▶</span>
+              <span class="media-slot__hint">Reel 9:16</span>
+            </div>
+          </div>
+          <div class="media-slot media-slot--reel" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon media-slot__icon--play">▶</span>
+              <span class="media-slot__hint">Reel 9:16</span>
+            </div>
+          </div>
+          <div class="media-slot media-slot--reel" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon media-slot__icon--play">▶</span>
+              <span class="media-slot__hint">Reel 9:16</span>
+            </div>
+          </div>
+          <div class="media-slot media-slot--reel" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon media-slot__icon--play">▶</span>
+              <span class="media-slot__hint">Reel 9:16</span>
+            </div>
+          </div>
+          <div class="media-slot media-slot--reel" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon media-slot__icon--play">▶</span>
+              <span class="media-slot__hint">Reel 9:16</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Смешанная галерея -->
+        <div class="media__row-head reveal">
+          <h3>Фото, скринкасты и backstage</h3>
+          <span class="media__hint">смешанная сетка</span>
+        </div>
+        <div class="media__gallery reveal">
+          <div class="media-slot media-slot--video gallery__item gallery__item--big" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon media-slot__icon--play">▶</span>
+              <span class="media-slot__title">Скринкаст / разбор работы</span>
+              <span class="media-slot__hint">16:9</span>
+            </div>
+          </div>
+          <div class="media-slot media-slot--square gallery__item" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon">📸</span>
+              <span class="media-slot__hint">Фото 1:1</span>
+            </div>
+          </div>
+          <div class="media-slot media-slot--square gallery__item" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon">🎬</span>
+              <span class="media-slot__hint">Backstage</span>
+            </div>
+          </div>
+          <div class="media-slot media-slot--portrait gallery__item" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon">📷</span>
+              <span class="media-slot__hint">Портрет 4:5</span>
+            </div>
+          </div>
+          <div class="media-slot media-slot--square gallery__item" data-cursor="media">
+            <div class="media-slot__inner">
+              <span class="media-slot__icon">🖼️</span>
+              <span class="media-slot__hint">Кадр 1:1</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="media__note reveal">
+          💡 Совет: сюда отлично встанут встроенные ролики из Instagram / YouTube / TikTok
+          или твои собственные видео. Разметка под все форматы уже готова.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ ПРОЦЕСС РАБОТЫ ============ -->
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">05 — Процесс</span>
+          <h2 class="section__title">Как мы будем работать</h2>
+          <p class="section__sub">Прозрачно и без сюрпризов — ты всегда знаешь, что происходит.</p>
+        </div>
+
+        <ol class="process__steps">
+          <li class="process__step reveal" data-cursor="link">
+            <span class="process__step-num">01</span>
+            <h3>Знакомство и бриф</h3>
+            <p>Созвон или переписка: цели, референсы, сроки, бюджет. Понимаю задачу до деталей.</p>
+          </li>
+          <li class="process__step reveal" data-reveal-delay="80" data-cursor="link">
+            <span class="process__step-num">02</span>
+            <h3>Идея и стратегия</h3>
+            <p>Концепция, сценарий, визуальный код и план. Согласуем направление до старта.</p>
+          </li>
+          <li class="process__step reveal" data-reveal-delay="160" data-cursor="link">
+            <span class="process__step-num">03</span>
+            <h3>Производство</h3>
+            <p>Съёмка и монтаж. Показываю промежуточные результаты, собираю обратную связь.</p>
+          </li>
+          <li class="process__step reveal" data-reveal-delay="240" data-cursor="link">
+            <span class="process__step-num">04</span>
+            <h3>Финал и публикация</h3>
+            <p>Финальные правки, экспорт под каждую площадку, помощь с публикацией и подачей.</p>
+          </li>
+          <li class="process__step reveal" data-reveal-delay="320" data-cursor="link">
+            <span class="process__step-num">05</span>
+            <h3>Аналитика и рост</h3>
+            <p>Смотрим на результаты, делаем выводы и масштабируем то, что сработало.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ НАВЫКИ ============ -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">06 — Навыки</span>
+          <h2 class="section__title">Инструменты и сильные стороны</h2>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skills__col reveal">
+            <h3 class="skills__col-title">Софт, в котором работаю</h3>
+            <div class="skills__tools">
+              <span class="tool">Premiere Pro</span>
+              <span class="tool">After Effects</span>
+              <span class="tool">DaVinci Resolve</span>
+              <span class="tool">CapCut</span>
+              <span class="tool">Figma</span>
+              <span class="tool">Photoshop</span>
+              <span class="tool">Lightroom</span>
+              <span class="tool">Notion</span>
+            </div>
+
+            <h3 class="skills__col-title skills__col-title--mt">Где я особенно силён</h3>
+            <div class="skills__tags">
+              <span class="tool tool--accent">Сторителлинг</span>
+              <span class="tool tool--accent">Динамичный монтаж</span>
+              <span class="tool tool--accent">Цветокор</span>
+              <span class="tool tool--accent">Тренды соцсетей</span>
+              <span class="tool tool--accent">Контент-стратегия</span>
+            </div>
+          </div>
+
+          <div class="skills__col reveal" data-reveal-delay="120">
+            <ul class="skills__bars">
+              <li>
+                <div class="skills__bar-head"><span>Видеомонтаж</span><span>95%</span></div>
+                <div class="skills__bar"><i style="--w:95%"></i></div>
+              </li>
+              <li>
+                <div class="skills__bar-head"><span>Съёмка фото/видео</span><span>90%</span></div>
+                <div class="skills__bar"><i style="--w:90%"></i></div>
+              </li>
+              <li>
+                <div class="skills__bar-head"><span>Motion / графика</span><span>80%</span></div>
+                <div class="skills__bar"><i style="--w:80%"></i></div>
+              </li>
+              <li>
+                <div class="skills__bar-head"><span>Дизайн / визуал</span><span>85%</span></div>
+                <div class="skills__bar"><i style="--w:85%"></i></div>
+              </li>
+              <li>
+                <div class="skills__bar-head"><span>SMM / стратегия</span><span>88%</span></div>
+                <div class="skills__bar"><i style="--w:88%"></i></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ОТЗЫВЫ ============ -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">07 — Отзывы</span>
+          <h2 class="section__title">Что говорят клиенты</h2>
+        </div>
+
+        <div class="testimonials__grid">
+          <figure class="card testimonial reveal" data-cursor="link">
+            <div class="testimonial__stars">★★★★★</div>
+            <blockquote>
+              «Алекс просто читает мысли. Ролики получились даже круче, чем я представляла —
+              и охваты выросли в три раза за месяц.»
+            </blockquote>
+            <figcaption class="testimonial__author">
+              <span class="testimonial__avatar" data-cursor="media">🙂</span>
+              <span>
+                <b>Мария К.</b>
+                <small>основатель бренда одежды</small>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="card testimonial reveal" data-reveal-delay="80" data-cursor="link">
+            <div class="testimonial__stars">★★★★★</div>
+            <blockquote>
+              «Работать одно удовольствие: всё в срок, на связи, правки без боли.
+              Наконец-то контент, за который не стыдно.»
+            </blockquote>
+            <figcaption class="testimonial__author">
+              <span class="testimonial__avatar" data-cursor="media">😎</span>
+              <span>
+                <b>Дмитрий В.</b>
+                <small>предприниматель</small>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="card testimonial reveal" data-reveal-delay="160" data-cursor="link">
+            <div class="testimonial__stars">★★★★★</div>
+            <blockquote>
+              «Помог выстроить личный бренд с нуля. За 4 месяца — 40 тысяч подписчиков
+              и стабильный поток клиентов из соцсетей.»
+            </blockquote>
+            <figcaption class="testimonial__author">
+              <span class="testimonial__avatar" data-cursor="media">🚀</span>
+              <span>
+                <b>Ирина С.</b>
+                <small>эксперт, коуч</small>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ СОЦСЕТИ / ЛИЧНЫЙ БРЕНД ============ -->
+    <section class="section social" id="social">
+      <div class="container">
+        <div class="social__card reveal">
+          <div class="social__text">
+            <span class="section__tag">Личный бренд</span>
+            <h2 class="section__title">Следи за процессом<br />в реальном времени</h2>
+            <p class="section__sub">
+              Backstage, эксперименты с форматами и мысли о контенте — каждый день
+              в Instagram и Twitter/X. Подпишись, чтобы видеть, как это делается.
+            </p>
+            <div class="social__links">
+              <a href="#" class="social__btn" data-cursor="link" target="_blank" rel="noopener">
+                <span class="social__btn-icon">📸</span>
+                <span>
+                  <b>Instagram</b>
+                  <small>@alex.creates · 62K</small>
+                </span>
+              </a>
+              <a href="#" class="social__btn" data-cursor="link" target="_blank" rel="noopener">
+                <span class="social__btn-icon">𝕏</span>
+                <span>
+                  <b>Twitter / X</b>
+                  <small>@alexcreates · 23K</small>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="social__feed">
+            <div class="media-slot media-slot--square" data-cursor="media">
+              <div class="media-slot__inner">
+                <span class="media-slot__icon">📸</span>
+                <span class="media-slot__hint">Пост из ленты</span>
+              </div>
+            </div>
+            <div class="media-slot media-slot--square" data-cursor="media">
+              <div class="media-slot__inner">
+                <span class="media-slot__icon">𝕏</span>
+                <span class="media-slot__hint">Твит / тред</span>
+              </div>
+            </div>
+            <div class="media-slot media-slot--square" data-cursor="media">
+              <div class="media-slot__inner">
+                <span class="media-slot__icon media-slot__icon--play">▶</span>
+                <span class="media-slot__hint">Reel</span>
+              </div>
+            </div>
+            <div class="media-slot media-slot--square" data-cursor="media">
+              <div class="media-slot__inner">
+                <span class="media-slot__icon">📸</span>
+                <span class="media-slot__hint">Пост из ленты</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ КОНТАКТЫ ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__intro reveal">
+            <span class="section__tag">08 — Контакты</span>
+            <h2 class="contact__title">Давай создадим<br />что-то крутое</h2>
+            <p class="contact__sub">
+              Есть идея, проект или просто хочешь обсудить сотрудничество?
+              Напиши мне — отвечаю в течение дня.
+            </p>
+
+            <div class="contact__channels">
+              <a href="mailto:hello@alexcreates.com" class="contact__channel" data-cursor="link">
+                <span>✉️</span> hello@alexcreates.com
+              </a>
+              <a href="https://t.me/" class="contact__channel" data-cursor="link" target="_blank" rel="noopener">
+                <span>✈️</span> Telegram: @alexcreates
+              </a>
+              <span class="contact__channel contact__channel--static">
+                <span class="status-dot"></span> Открыт для проектов в 2026
+              </span>
+            </div>
+          </div>
+
+          <form class="contact__form card reveal" data-reveal-delay="120" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Как тебя зовут?</label>
+              <input type="text" id="name" name="name" placeholder="Имя" required />
+            </div>
+            <div class="field">
+              <label for="email">Куда ответить?</label>
+              <input type="text" id="email" name="email" placeholder="Email или @телеграм" required />
+            </div>
+            <div class="field">
+              <label for="message">Расскажи о проекте</label>
+              <textarea id="message" name="message" rows="4" placeholder="Задача, сроки, бюджет, ссылки на референсы…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" data-cursor="link">
+              Отправить заявку
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="contact__form-note" id="formNote" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ ПОДВАЛ ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">alex<span class="logo__accent">.creates</span></span>
+      </div>
+
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="#about">Обо мне</a>
+        <a href="#work">Проекты</a>
+        <a href="#media">Медиа</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+
+      <div class="footer__socials">
+        <a href="#" aria-label="Instagram" data-cursor="link" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" aria-label="Twitter / X" data-cursor="link" target="_blank" rel="noopener">Twitter/X</a>
+        <a href="#" aria-label="YouTube" data-cursor="link" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" aria-label="Telegram" data-cursor="link" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> Алекс Морозов. Сделано с ✦ и кофе.</span>
+      <a href="#hero" class="footer__top" data-cursor="link">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
