@@ -11,18 +11,13 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---------- Шапка: эффект при скролле ---------- */
-  const header = document.getElementById("header");
-  const heroSection = document.getElementById("hero");
-  const onScroll = () => {
-    const y = window.scrollY;
-    header.classList.toggle("is-scrolled", y > 30);
-    // шапка спрятана, пока виден первый экран, и выезжает при скролле дальше
-    const heroH = heroSection ? heroSection.offsetHeight : window.innerHeight;
-    header.classList.toggle("is-hidden", y < heroH - 120);
-  };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  /* ---------- Док-навигация: лёгкое уплотнение при скролле ---------- */
+  const dock = document.getElementById("dock");
+  if (dock) {
+    const onScroll = () => dock.classList.toggle("is-scrolled", window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
 
   /* ---------- Мобильное меню ---------- */
   const burger = document.getElementById("burger");
@@ -45,7 +40,7 @@
   }
 
   /* ---------- Активный пункт навигации ---------- */
-  const navLinks = Array.from(document.querySelectorAll(".nav__link"));
+  const navLinks = Array.from(document.querySelectorAll(".dock__item"));
   const sectionsForNav = navLinks
     .map((l) => document.querySelector(l.getAttribute("href")))
     .filter(Boolean);
@@ -221,7 +216,7 @@
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 70;
+      const top = target.getBoundingClientRect().top + window.scrollY - 90;
       window.scrollTo({ top, behavior: prefersReduced ? "auto" : "smooth" });
     });
   });

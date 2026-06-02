@@ -44,81 +44,60 @@
   </div>
 
   <!-- ============ ШАПКА ============ -->
-  <header class="header is-hidden" id="header">
-    <div class="container header__inner">
-      <a href="#hero" class="logo" data-cursor="link">
-        <span class="logo__mark">✦</span>
-        <span class="logo__text">alex<span class="logo__accent">.creates</span></span>
-      </a>
-
-      <nav class="nav" id="nav" aria-label="Основная навигация">
-        <a href="#about" class="nav__link">Обо мне</a>
-        <a href="#services" class="nav__link">Услуги</a>
-        <a href="#work" class="nav__link">Проекты</a>
-        <a href="#media" class="nav__link">Медиа</a>
-        <a href="#process" class="nav__link">Процесс</a>
-        <a href="#testimonials" class="nav__link">Отзывы</a>
-        <a href="#contact" class="btn btn--small nav__cta" data-cursor="link">Написать мне</a>
-      </nav>
-
-      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+  <!-- Плавающая навигация (liquid glass) — основная навигация сайта -->
+  <nav class="dock" id="dock" aria-label="Основная навигация">
+    <a href="#hero" class="dock__brand" data-cursor="link" aria-label="В начало">✦</a>
+    <a href="#hero" class="dock__item is-active" data-cursor="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8M5 9.5V20h14V9.5"/></svg><span>Главная</span></a>
+    <a href="#about" class="dock__item" data-cursor="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0116 0"/></svg><span>Обо мне</span></a>
+    <a href="#work" class="dock__item" data-cursor="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg><span>Проекты</span></a>
+    <a href="#skills" class="dock__item" data-cursor="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg><span>Навыки</span></a>
+    <a href="#contact" class="dock__item" data-cursor="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.5.5l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7.5-.5l-2 2a5 5 0 007 7l1-1"/></svg><span>Контакты</span></a>
+  </nav>
 
   <main>
     <!-- ============ ГЛАВНЫЙ ЭКРАН ============ -->
     <section class="hero" id="hero">
-      <div class="container">
-        <div class="hero__card reveal">
-          <!-- Фото справа (главное фото — assets/hero.jpg) -->
-          <div class="hero__photo" data-cursor="media">
-            <span class="hero__photo-ph">📷 положи фото в assets/hero.jpg</span>
-            <img src="assets/hero.jpg" alt="Алекс Морозов — digital creator" class="hero__photo-img" onerror="this.remove()" />
-          </div>
+      <!-- Главное фото — уходит в правый край экрана (assets/hero.jpg) -->
+      <div class="hero__photo" data-cursor="media">
+        <span class="hero__photo-ph">📷 положи фото в assets/hero.jpg</span>
+        <img src="assets/hero.jpg" alt="Алекс Морозов — digital creator" class="hero__photo-img" onerror="this.remove()" />
+      </div>
 
-          <!-- Верхняя панель -->
-          <div class="hero__topbar">
-            <span class="hero__status"><span class="status-dot status-dot--green"></span> Открыт к проектам</span>
-            <a href="#contact" class="btn-cv" data-cursor="link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+      <div class="container hero__inner">
+        <div class="hero__body reveal">
+          <span class="hero__status"><span class="status-dot status-dot--green"></span> Открыт к проектам</span>
+          <span class="hero__role">Digital Creator · фрилансер</span>
+          <h1 class="hero__name">Алекс<br />Морозов</h1>
+
+          <ul class="hero__contacts">
+            <li>
+              <span class="hero__ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+              <a href="mailto:hello@alexcreates.com">hello@alexcreates.com</a>
+            </li>
+            <li>
+              <span class="hero__ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2"/></svg></span>
+              <a href="#" target="_blank" rel="noopener">@alex.creates</a>
+            </li>
+            <li>
+              <span class="hero__ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 5L2 12l6 2m13-9l-3 15-7-4m10-11L9 16"/></svg></span>
+              <a href="#" target="_blank" rel="noopener">Telegram: @alexcreates</a>
+            </li>
+            <li>
+              <span class="hero__ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <span>Москва · удалённо</span>
+            </li>
+          </ul>
+
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary" data-cursor="link">
+              Написать мне
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#" class="btn btn--ghost" data-cursor="link">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
               Скачать CV
             </a>
           </div>
-
-          <!-- Тело: роль + имя + контакты -->
-          <div class="hero__body">
-            <span class="hero__role">Digital Creator · фрилансер</span>
-            <h1 class="hero__name">Алекс<br />Морозов</h1>
-            <ul class="hero__contacts">
-              <li>
-                <span class="hero__ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-                <a href="mailto:hello@alexcreates.com">hello@alexcreates.com</a>
-              </li>
-              <li>
-                <span class="hero__ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2"/></svg></span>
-                <a href="#" target="_blank" rel="noopener">@alex.creates</a>
-              </li>
-              <li>
-                <span class="hero__ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 5L2 12l6 2m13-9l-3 15-7-4m10-11L9 16"/></svg></span>
-                <a href="#" target="_blank" rel="noopener">Telegram: @alexcreates</a>
-              </li>
-              <li>
-                <span class="hero__ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-                <span>Москва · удалённо</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Плавающая навигация -->
-          <nav class="hero__nav" aria-label="Разделы">
-            <a href="#hero" class="hero__nav-item is-active" data-cursor="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8M5 9.5V20h14V9.5"/></svg><span>Главная</span></a>
-            <a href="#about" class="hero__nav-item" data-cursor="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0116 0"/></svg><span>Обо мне</span></a>
-            <a href="#work" class="hero__nav-item" data-cursor="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg><span>Проекты</span></a>
-            <a href="#skills" class="hero__nav-item" data-cursor="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg><span>Навыки</span></a>
-            <a href="#contact" class="hero__nav-item" data-cursor="link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.5.5l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7.5-.5l-2 2a5 5 0 007 7l1-1"/></svg><span>Контакты</span></a>
-          </nav>
         </div>
       </div>
     </section>
@@ -303,31 +282,32 @@
         </div>
 
         <div class="work__list">
-          <!-- Кейс 1 -->
+          <!-- Кейс 1 — скриншот приложения (assets/app-1.png) -->
           <article class="case reveal" data-cursor="link">
             <div class="case__media">
-              <div class="media-slot media-slot--video" data-cursor="media">
+              <div class="media-slot media-slot--video media-slot--app" data-cursor="media">
+                <img src="assets/app-1.png" alt="Скриншот моего приложения" class="media-fill media-fill--contain" onerror="this.remove()" />
                 <div class="media-slot__inner">
-                  <span class="media-slot__icon media-slot__icon--play">▶</span>
-                  <span class="media-slot__title">Кейс-видео / превью проекта</span>
-                  <span class="media-slot__hint">формат 16:9</span>
+                  <span class="media-slot__icon">📱</span>
+                  <span class="media-slot__title">Скриншот приложения: assets/app-1.png</span>
+                  <span class="media-slot__hint">положи картинку в assets/</span>
                 </div>
               </div>
             </div>
             <div class="case__info">
               <div class="case__meta">
-                <span class="case__cat">Видеопродакшн</span>
-                <span class="case__year">2025</span>
+                <span class="case__cat">Продукт · UI/UX</span>
+                <span class="case__year">2026</span>
               </div>
-              <h3 class="case__title">Запуск бренда одежды в Reels</h3>
+              <h3 class="case__title">Моё приложение</h3>
               <p class="case__desc">
-                Серия из 12 вертикальных роликов для запуска коллекции.
-                Единый визуальный код, динамичный монтаж и трендовые звуки.
+                Дизайн и сборка интерфейса приложения: от идеи и прототипа до
+                готового продукта. Чистый UI, понятная навигация и внимание к деталям.
               </p>
               <ul class="case__results">
-                <li><b>2.4M</b> просмотров</li>
-                <li><b>+18K</b> подписчиков</li>
-                <li><b>x3</b> охваты</li>
+                <li><b>4.9★</b> рейтинг</li>
+                <li><b>10K+</b> загрузок</li>
+                <li><b>#1</b> в подборке</li>
               </ul>
               <span class="case__link">Смотреть кейс →</span>
             </div>
