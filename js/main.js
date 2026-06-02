@@ -13,9 +13,13 @@
 
   /* ---------- Шапка: эффект при скролле ---------- */
   const header = document.getElementById("header");
+  const heroSection = document.getElementById("hero");
   const onScroll = () => {
-    if (window.scrollY > 30) header.classList.add("is-scrolled");
-    else header.classList.remove("is-scrolled");
+    const y = window.scrollY;
+    header.classList.toggle("is-scrolled", y > 30);
+    // шапка спрятана, пока виден первый экран, и выезжает при скролле дальше
+    const heroH = heroSection ? heroSection.offsetHeight : window.innerHeight;
+    header.classList.toggle("is-hidden", y < heroH - 120);
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
